@@ -56,7 +56,7 @@ function getWaEnquiry() {
   var phoneNum = "919172642754";
   var msg = '';
   msg = $("#msgfield").val();
-  var waString = `https://wa.me/${phoneNum}?text=Hi%20Archnine,%20I%20am%20interested.%20${msg}.`
+  var waString = `https://wa.me/${phoneNum}?text=Hi%20Archnine,%20I%20am%20interested%20in%20interior%20designing.%20${msg}.`
   var win = window.open(waString, '_blank');
   if (win) {
     //Browser has allowed it to be opened

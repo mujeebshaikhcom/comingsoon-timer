@@ -18,8 +18,8 @@
 }
 .container .image {
   position: absolute;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   object-fit: cover;
   z-index: -1;
 }
@@ -124,5 +124,16 @@ input::placeholder {
 @media screen and (max-width: 480px) {
   .container header {
     font-size: 50px;
+  }
+  .time .number {
+    font-size: 50px;
+  }
+  .container .time-content {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    margin: 1rem;
+    border: 1px solid white;
+    padding: 1rem 1.5rem;
   }
 }

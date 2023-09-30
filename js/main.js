@@ -9,7 +9,7 @@ const seconds = document.querySelector(".seconds .number"),
 const currentDate = new Date();
 
 // Date for October 1st of the current year
-const octoberFirst = new Date(currentDate.getFullYear(), 9, 1); // Note: Months are zero-based, so 9 represents October.
+const octoberFirst = new Date(currentDate.getFullYear(), 11, 31); // Note: Months are zero-based, so 9 represents October.
 
 // Calculate the time remaining in seconds, minutes, hours, and days
 const timeRemainingInSeconds = Math.floor((octoberFirst - currentDate) / 1000);

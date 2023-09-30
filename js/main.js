@@ -5,25 +5,25 @@ const seconds = document.querySelector(".seconds .number"),
   hours = document.querySelector(".hours .number"),
   days = document.querySelector(".days .number");
 
-// Current date
-const currentDate = new Date();
-
-// Date for October 1st of the current year
-const octoberFirst = new Date(currentDate.getFullYear(), 11, 31); // Note: Months are zero-based, so 9 represents October.
-
-// Calculate the time remaining in seconds, minutes, hours, and days
-const timeRemainingInSeconds = Math.floor((octoberFirst - currentDate) / 1000);
-const timeRemainingInMinutes = Math.floor(timeRemainingInSeconds / 60);
-const timeRemainingInHours = Math.floor(timeRemainingInMinutes / 60);
-const timeRemainingInDays = Math.floor(timeRemainingInHours / 24);
-
-// Calculate remaining time components
-let secValue = timeRemainingInSeconds % 60;
-let minValue = timeRemainingInMinutes % 60;
-let hourValue = timeRemainingInHours % 24;
-let dayValue = timeRemainingInDays;
-
+  
 const timeFunction = setInterval(() => {
+  // Current date
+  const currentDate = new Date();
+  
+  // Date for October 1st of the current year
+  const octoberFirst = new Date(currentDate.getFullYear(), 11, 31); // Note: Months are zero-based, so 9 represents October.
+  
+  // Calculate the time remaining in seconds, minutes, hours, and days
+  const timeRemainingInSeconds = Math.floor((octoberFirst - currentDate) / 1000);
+  const timeRemainingInMinutes = Math.floor(timeRemainingInSeconds / 60);
+  const timeRemainingInHours = Math.floor(timeRemainingInMinutes / 60);
+  const timeRemainingInDays = Math.floor(timeRemainingInHours / 24);
+  
+  // Calculate remaining time components
+  let secValue = timeRemainingInSeconds % 60;
+  let minValue = timeRemainingInMinutes % 60;
+  let hourValue = timeRemainingInHours % 24;
+  var dayValue = timeRemainingInDays;
   secValue--;
 
   if (secValue === 0) {
